@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: url(image/5.jpg);
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        .loginBox{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 350px;
+            height: 420px;
+            padding: 50px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            background:transparent;
+        }
+
+        .user{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: calc(-100px/2);
+            left: calc(50% - 50px);
+            }
+
+        h2{
+            margin: 0;
+            font-size: 34px;
+            padding: 10px 0 20px;
+            color: purple;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        .loginBox p{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            color:black;
+        }
+
+        .loginBox input{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .loginBox input[type="email"]{
+            margin-top: 10px;
+            background:transparent;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+            
+
+        .loginBox input[type="text"],
+        .loginBox input[type="password"]{
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            height: 30px;
+            color: black;
+            font-size: 13px;
+        }
+
+        ::placeholder{
+            color: gray;
+        }
+
+        .loginBox input[type="submit"]{
+            border: none;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+            background: #ff267e;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .loginBox input[type="submit"]:hover{
+            background: purple;
+            color: #262626;
+        }
+
+        .loginBox a{
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #redirect:hover{
+            color: blue;
+
+        }
+        .cancel{
+            padding-left: 22%;
+            padding-right: 22%;
+        }
+		#checkboxxx{
+		    margin-left:-110px;
+		}
+
+        #redirect{
+            color: black;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="loginBox">
+        <img src="image/logo2.jpg" class="user">
+        <h2>Login</h2>
+        <form id="log" action="select.php" method="POST">
+            <p>Email</p>
+            <input type="email" name="Email" placeholder="Enter Email" id="EMAIL"required>
+            <p>Password</p>
+            <input type="password" name="pasw" placeholder="Password" id="psw" required><br>
+            show 
+			<input type="checkbox" id="checkboxxx" onclick="myFunction()"> 
+            <input type="submit" name="sub" value="Sign In" onclick="submit()">  
+            <a href="signup.html" id="redirect">New User...</a>  
+        </form>
+    </div>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("psw");
+            if(x.type === "password"){
+                x.type = "text";
+            }
+            else{
+                x.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
